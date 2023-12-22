@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>психологическая помощь</title>
+    <link rel="stylesheet" href="/static/main_css.css">
+    <link rel="icon" href="/static/logo.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <div class="_0_media_check_cl" style="display: none; z-index: 1000;">
+        <!--Указание размеров экрана-->
+        <style>
+            ._0_media_check_cl {
+                width: 150px;
+                height: 50px;
+                position: fixed;
+                top: 50px;
+                left: 50px;
+                background-color: aqua;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+        <div><span>Ширина-</span><span id="_0_media_width_id">0</span>px</div>
+        <div><span>Высота-</span><span id="_0_media_length_id">0</span>px</div>
+        <script>
+            // Указание размеров экрана;
+            document.getElementById('_0_media_width_id').innerText = window.innerWidth;
+            document.getElementById('_0_media_length_id').innerText = window.innerHeight;
+            window.addEventListener('resize', _ => {
+                document.getElementById('_0_media_width_id').innerText = window.innerWidth;
+                document.getElementById('_0_media_length_id').innerText = window.innerHeight;
+            });
+        </script>
+    </div>
+
+    <div class="head_website_dempf_cl" id="head_website_dempf_id">
+        <!--Фиксированный (демпфер)-->
+    </div>
+    <div class="head_website_cl" id="head_website_id">
+        <!--Фиксированный-->
+
+        <div class="organizations_logo_cl" id="organizations_logo_id">
+            <!--иконка организации-->
+            <a href="/1_main">
+                <img src="/static/logo.png" alt="Н/Ф" id="organizations_logo_img_id">
+            </a>
+            <div>
+                <span>ПСИХОЛОГИЧЕСКАЯ ПОМОЩЬ</span>
+                <span>поможем вам найти себя</span>
+            </div>
+        </div>
+
+        <div class="catalog_cl" id="catalog_id">
+            <!--каталог-->
+            <a href="/1_main">
+                <div>главное</div>
+            </a>
+            <a href="/block_1">
+                <div>услуги</div>
+            </a>
+            <a href="/block_2">
+                <div>отзывы</div>
+            </a>
+            <a href="/block_3">
+                <div class="order_button_cl" id="order_button_1_id"><span>записаться</span></div>
+            </a>
+        </div>
+        <div class="burger_catalog_cl" id="burger_catalog_id">
+            <!--каталог бургер-->
+            <img src="/static/katalog_img.png" alt="Н/Ф" id="burger_catalog_buttom_id">
+            <div class="burger_catalog_open_cl" id="burger_catalog_open_id">
+                <!--скрытый каталог-->
+                <a href="/1_main">
+                    <div>главное</div>
+                </a>
+                <a href="/block_1">
+                    <div>услуги</div>
+                </a>
+                <a href="/block_2">
+                    <div>отзывы</div>
+                </a>
+                <a href="/block_3">
+                    <div class="order_button_cl" id="order_button_2_id"><span>записаться</span></div>
+                </a>
+            </div>
+            <script>
+                let organizations_logo = document.getElementById('organizations_logo_id');
+                let burger_catalog_open = document.getElementById('burger_catalog_open_id'); // (скрытый каталог);
+                let burger_catalog = document.getElementById('burger_catalog_id'); // (каталог бургер);
+                burger_catalog_open.style.display = 'none'; // (скрытие скрытого каталога);
+                document.getElementById('burger_catalog_buttom_id').addEventListener('click', _ => {
+                    // Скрытие и показ скрытого каталога;
+                    burger_catalog_open.style.top = `${burger_catalog.getBoundingClientRect().top + burger_catalog.offsetHeight}px`; // (Y-позиция каталог бургер);
+                    burger_catalog_open.style.right = `0px`; // (X-позиция каталог бургер);
+                    if (burger_catalog_open.style.display == 'none') { burger_catalog_open.style.display = 'flex' }
+                    else { burger_catalog_open.style.display = 'none' };
+                });
+            </script>
+        </div>
+
+        <div class="contacts_cl" id="contacts_id">
+            <!--контакты-->
+            <div>
+                <img src="/static/Phone.png" alt="Н/Ф">
+                <span>8 (707) 848-14-55</span>
+            </div>
+            <div>
+                <img src="/static/Email.png" alt="Н/Ф">
+                <span>tatiana24ulian@mail.ru</span>
+            </div>
+        </div>
+    </div>
+
+    {% block main %}
+    {% endblock %}
+
+    <footer id="footer_id">
+        <div class="head_footer_cl" id="head_footer_id">
+            <div>
+                <div>
+                    Жизнь - удивительное путешествие, полное вызовов и возможностей. На вашем пути могут возникнуть
+                    трудности, но помните, что у вас есть внутренняя сила и ресурсы, чтобы справиться с любыми
+                    трудностями. Разрешение внутренних конфликтов и осознание своих чувств - важные шаги на пути к
+                    психологическому благополучию.
+                </div>
+            </div>
+            <div class="contacts_cl">
+                <div>
+                    <img src="/static/Phone.png" alt="Н/Ф">
+                    <span>8 (707) 848-14-55</span>
+                </div>
+                <div>
+                    <img src="/static/Email.png" alt="Н/Ф">
+                    <span>tatiana24ulian@mail.ru</span>
+                </div>
+            </div>
+        </div>
+        <div class="body_footer_cl" id="body_footer_id">ИП "Иванова Татьяна Ульяновна"</div>
+        <div class="developer_footer_cl">
+            <!--иконка и ссылка сайта создателя-->
+            <a href="https://haskiprog.pythonanywhere.com/">
+                <span>сайт сделан:</span>
+                <img src="/static/icon_haske.png" alt="Н/Ф">
+                <b> HaskiProg</b>
+            </a>
+        </div>
+    </footer>
+
+
+    <script src="/static/main_js.js"></script>
+</body>
+
+</html>

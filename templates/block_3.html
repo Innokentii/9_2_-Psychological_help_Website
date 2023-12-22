@@ -1,0 +1,42 @@
+{% extends "main.html" %}
+
+{% block main %}
+
+<link rel="stylesheet" href="/static/block_3_css.css">
+
+<div class="record_cl">
+    <h1>Записаться на прием у психолога</h1>
+    <div class="record_block_cl">
+        <div class="record_text_cl">
+            <div>
+                Мы с радостью приветствуем вас и если у вас проблемы советуем записатся на прием в нашем центре психологической помощи. Мы готовы предоставить вам поддержку и внимание, которые могут вам потребоваться.
+            </div>
+            <div>
+                При записи в течении часа позвонит наш администратор для уточнения вида помощи, даты и времени приема.
+            </div>
+        </div>
+        <div class="record_input_cl">
+            <span>ваш контактный номер:</span>
+            <input class="add_error_cl" type="text" id="record_phone_text_id" placeholder="обязательно*">
+            <span>Фамилия Имя Отчество:</span>
+            <input type="text" id="record_FIO_text_id" placeholder="обязательно*">
+            <span>ваши проблемы и пожелания:</span>
+            <textarea id="record_area_text_id" cols="36" rows="9"></textarea>
+            <div class="record_buttom_cl" id="record_buttom_id"><span>запись на прием</span></div>
+        </div>
+    </div>
+</div>
+<div id="fog_modal_record_id">
+    <!--Туман модального окна записи-->
+</div>
+<div id="cart_modal_record_id">
+    <!--Карточка модального окна записи-->
+    <div>
+        Ваш шаг по обращению за помощью — важный и смелый. Мы ценим вашу открытость и доверие к нашей команде психологов. Наши специалисты готовы предоставить вам индивидуальное внимание, помощь в решении трудностей и поддержку в вашем психологическом благополучии.
+        Пожалуйста, знайте, что ваш запрос был получен, и наша команда свяжется с вами в ближайшее время для уточнения деталей и назначения удобного времени приема.
+    </div>
+</div>
+
+<script src="/static/block_3_js.js"></script>
+
+{% endblock %}
