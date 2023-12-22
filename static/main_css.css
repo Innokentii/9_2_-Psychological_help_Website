@@ -1,0 +1,350 @@
+/*=================================================================================*/
+/*                             ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ                               */
+/*VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV*/
+
+:root {
+    --w_h_modal_win: 200px; /*(ширина и высота карточки модального окна);*/
+    --bord_modal_win: 4px; /*(толщина рамки border карточки модального окна);*/
+    --height__head_website: 86px; /*(высота шапки сайта);*/
+    --bord_head_website: 2px; /*(толщина рамки шапки сайта));*/
+    --color_text_black: #0c265c; /*(основной цвет текста и границ)*/
+    --font_size_main: Gerbera, sans-serif !important; /*(основной шрифт текста)*/
+}
+
+/*=================================================================================*/
+/*                                  СТИЛИЗАЦИЯ                                    */
+/*VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV*/
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    font-family: var(--font_size_main);
+}
+
+footer {
+    width: 100%;
+    background-color: rgb(198, 197, 197);
+    border-top: solid 2px var(--color_text_black);
+    background: linear-gradient(15deg, #2980b9,#2980b9,#2980b9,#2980b9,#3d7fac,#5ba3d3,#78a4c2,#a7c7da);
+    backdrop-filter: blur(8px);
+}
+
+footer > div:nth-child(1) {
+    display: grid;
+    grid-template-columns: 1fr 0fr;
+    border-bottom: solid 2px var(--color_text_black);
+}
+
+@media (max-width: 770px) {
+    footer > div:nth-child(1) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+footer > div:nth-child(1) > div:nth-child(1) {
+    padding: 5px;
+    padding-left: 15px;
+    text-indent: 20px;
+    font-weight: bold;
+    border-right: solid 2px var(--color_text_black);
+    color: var(--color_text_black);
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+footer > div:nth-child(1) > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 5px;
+    padding-left: 15px;
+    border-left: none;
+}
+
+@media (max-width: 770px) {
+    footer > div:nth-child(1) > div:nth-child(2) {
+        border-left: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    footer > div:nth-child(1) > div:nth-child(1) {
+        border-bottom: solid 2px var(--color_text_black);
+    }
+}
+
+footer > div:nth-child(2) {
+    border-bottom: solid 2px var(--color_text_black);
+    text-align: center;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > div:nth-child(3) {
+    text-align: center;
+}
+
+/*_______иконка и ссылка сайта создателя_______*/
+
+.developer_footer_cl {
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(222, 220, 220);
+}
+
+.developer_footer_cl > a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+}
+
+.developer_footer_cl > a:link, .developer_footer_cl > a:visited {
+    color: rgb(19, 129, 239);
+    text-shadow: 0.5px 0.5px 0.5px black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.developer_footer_cl > a > img {
+    width: 30px;
+    height: 21px;
+    border-radius: 10.5px;
+}
+
+/*_______главная страница_______*/
+
+body {
+    background: white;
+}
+
+/*________1_иконка загрузки страницы______________*/
+
+/*________3_тип шапки______________*/
+
+.head_website_dempf_cl {
+    /*фикцированный (демпфер)*/
+    width: calc(100% - var(--bord_head_website)*2);
+    height: var(--height__head_website);
+}
+
+.head_website_cl {
+    /*фикцированный*/
+    width: 100%;
+    height: var(--height__head_website);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 0fr 8fr 0.2fr;
+    grid-template-rows: 1fr;
+    background: linear-gradient(15deg, #2980b9,#2980b9,#2980b9,#2980b9,#3d7fac,#5ba3d3,#78a4c2,#a7c7da);
+    z-index: 999;
+    border-bottom: solid 2px var(--color_text_black);
+}
+
+@media (max-width: 1200px) {
+    .head_website_cl, .head_website_dempf_cl {
+        justify-content: start;
+        flex-wrap: wrap;
+        height: auto;
+        gap: 5px;
+    }
+}
+
+/*___________________иконка организации_____________________*/
+.organizations_logo_cl {
+    width: 370px;
+    height: 86px;
+    display: grid;
+    grid-template-columns: 0.2fr 0.8fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
+    border-right: solid 2px var(--color_text_black);
+}
+
+.organizations_logo_cl > a > img {
+    height: 86px;
+    width: 86px;
+}
+
+.organizations_logo_cl > div {
+    height: 100%;
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 10px;
+}
+
+@media (max-width: 500px) {
+    .organizations_logo_cl {
+        width: 300px;
+    }
+    .organizations_logo_cl > div {
+        width: 200px;
+    }
+}
+
+.organizations_logo_cl > div > span:nth-child(1) {
+    padding-top: 10px;
+    font-size: 16px;
+    font-weight: bolder;
+    color: rgb(173, 171, 171);
+}
+
+.organizations_logo_cl > div > span:nth-child(2) {
+    font-size: 15px;
+    font-style: italic;
+}
+
+/*___________________каталог_____________________*/
+.catalog_cl {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-left: 40px;
+    text-shadow: 1px 1px 1px;
+}
+
+@media (max-width: 1200px) {
+    .catalog_cl {
+        justify-content: start;
+    }
+}
+
+@media (max-width: 770px) {
+    .catalog_cl {display: none;}
+}
+
+.catalog_cl > a {
+    text-decoration: none;
+    color: var(--color_text_black);
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.catalog_cl > a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 1200px) {
+    .catalog_cl > a {
+        margin-left: 40px;
+    }
+}
+
+.burger_catalog_cl {
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 20px;
+}
+
+@media (max-width: 770px) {
+    .burger_catalog_cl {display: flex;}
+}
+
+#burger_catalog_buttom_id {
+    width: 80px;
+    height: 80px;
+}
+
+#burger_catalog_buttom_id:hover {
+    cursor: pointer;
+}
+
+#burger_catalog_buttom_id:active {
+    margin: 2.5px;
+    width: 75px;
+    height: 75px;
+}
+
+.burger_catalog_open_cl {
+    width: 250px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    gap: 15px;
+    padding: 10px;
+    border: solid 2px var(--color_text_black);
+    background-color: white;
+    background: linear-gradient(15deg, #2980b9,#2980b9,#2980b9,#2980b9,#3d7fac,#5ba3d3,#78a4c2,#a7c7da);
+    text-shadow: 1px 1px 1px;
+}
+
+.burger_catalog_open_cl > a {
+    text-decoration: none;
+    color: var(--color_text_black);
+    font-weight: bolder;
+    font-size: 22px;
+}
+
+.burger_catalog_open_cl > a:hover {
+    text-decoration: underline;
+}
+
+.order_button_cl {
+    width: 150px;
+    height: 40px;
+    border: solid 3px var(--color_text_black);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color_text_black);
+    font-weight: bolder;
+    box-shadow: 3px 3px 3px rgb(27, 27, 27);
+}
+
+.order_button_cl:active {
+    margin: 2.5px 7.5px 2.5px 7.5px;
+    width: 135px;
+    height: 40px;
+    font-size: 17px;
+}
+
+/*___________________контакты_____________________*/
+.contacts_cl {
+    height: 86px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    padding-left: 10px;
+    border-left: solid 1px var(--color_text_black);
+}
+
+.contacts_cl > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+}
+
+.contacts_cl > div > img {
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width: 1200px) {
+    .contacts_cl {display: none;}
+}

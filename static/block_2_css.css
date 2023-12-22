@@ -1,0 +1,89 @@
+/*=================================================================================*/
+/*                             ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ                               */
+/*VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV*/
+
+:root {
+    --w_h_modal_win: 200px; /*(ширина и высота карточки модального окна);*/
+    --bord_modal_win: 4px; /*(толщина рамки border карточки модального окна);*/
+    --height__head_website: 86px; /*(высота шапки сайта);*/
+    --bord_head_website: 2px; /*(толщина рамки шапки сайта));*/
+    --color_text_black: #0c265c; /*(основной цвет текста и границ)*/
+    --font_size_main: Gerbera, sans-serif !important; /*(основной шрифт текста)*/
+}
+
+/*=================================================================================*/
+/*                                   СТИЛИЗАЦИЯ                                    */
+/*VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV*/
+
+.reviews_cl {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: var(--color_text_black);
+    padding-bottom: 30px;
+    background: linear-gradient(15deg, #2980b9,#2980b9,#2980b9,#2980b9,#3d7fac,#5ba3d3,#78a4c2,#a7c7da);
+}
+
+.reviews_cl > h2 {
+    font-weight: bolder;
+}
+
+.text_reviews_cl > div:nth-child(1) {
+    margin-top: 40px;
+    margin-left: 40px;
+    font-size: 24px;
+}
+
+.text_reviews_cl > p:nth-child(2) {
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 19px;
+}
+
+/*_____ первый отзыв _____*/
+
+.array_reviews_one_cl {
+    display: flex;
+    flex-direction: row;
+}
+
+.array_reviews_one_cl > div:nth-child(1) {
+    width: 50vw;
+}
+
+.array_reviews_one_cl > div:nth-child(2) {
+    width: 50vw;
+    height: 380px;
+    background-image: url(/static/review_bg_rev.png);
+    background-size: cover;
+    background-position: 50% 50%;
+    border-radius: 60px;
+    border-bottom-right-radius: 0;
+    box-shadow: 4px 4px 8px black;
+    margin-left: 5px;
+}
+
+/*_____ второй отзыв _____*/
+
+.array_reviews_two_cl {
+    display: flex;
+    flex-direction: row;
+}
+
+.array_reviews_two_cl > div:nth-child(2) {
+    width: 50vw;
+}
+
+.array_reviews_two_cl > div:nth-child(1) {
+    width: 50vw;
+    height: 380px;
+    background-image: url(/static/review_bg.png);
+    background-size: cover;
+    background-position: 50% 50%;
+    border-radius: 60px;
+    border-bottom-left-radius: 0;
+    box-shadow: 4px 4px 8px black;
+    margin-right: 5px;
+}

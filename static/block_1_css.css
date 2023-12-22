@@ -1,0 +1,123 @@
+/*=================================================================================*/
+/*                             ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ                               */
+/*VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV*/
+
+:root {
+    --w_h_modal_win: 200px; /*(ширина и высота карточки модального окна);*/
+    --bord_modal_win: 4px; /*(толщина рамки border карточки модального окна);*/
+    --height__head_website: 86px; /*(высота шапки сайта);*/
+    --bord_head_website: 2px; /*(толщина рамки шапки сайта));*/
+    --color_text_black: #0c265c; /*(основной цвет текста и границ)*/
+    --font_size_main: Gerbera, sans-serif !important; /*(основной шрифт текста)*/
+}
+
+/*=================================================================================*/
+/*                                   СТИЛИЗАЦИЯ                                    */
+/*VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV*/
+
+.services_of_a_psychologist_cl {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: linear-gradient(15deg, #2980b9,#2980b9,#2980b9,#2980b9,#3d7fac,#5ba3d3,#78a4c2,#a7c7da);
+}
+
+.services_of_a_psychologist_cl > div {
+    display: grid;
+    grid-template-columns: 0.5fr 0fr 0fr 0fr 0.5fr;
+    grid-template-rows: 1fr;
+    padding-bottom: 15px;
+    border-bottom: solid 4px var(--color_text_black);
+    color: var(--color_text_black);
+}
+
+@media (max-width: 950px) {
+    .services_of_a_psychologist_cl {
+        margin-top: 80px;
+    }
+    .services_of_a_psychologist_cl > div {
+        grid-template-columns: none;
+        grid-template-rows: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+.serv_psych_img_cl {
+    /*Изображение услуги*/
+    width: 250px;
+    height: 200px;
+    border: solid 2px var(--color_text_black);
+}
+
+.serv_psych_text_cl {
+    /*название и описание услуги*/
+    width: 400px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.serv_psych_price_cl {
+    /*стоимость и продолжительность сеанса*/
+    padding-top: 75px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    border-left: solid 2px var(--color_text_black);
+}
+
+@media (max-width: 950px) {
+    .serv_psych_price_cl {
+        padding-top: 10px;
+        border-left: none;
+    }
+}
+
+.serv_psych_price_cls > div {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.services_of_a_psychologist_cl > div > div:nth-child(2) {
+    background-size: cover;
+    filter: brightness(70%);
+    filter: opacity(0.6);
+}
+
+.services_of_a_psychologist_cl > div:nth-child(1) > div:nth-child(2) {
+    background-image: url(/static/P1_.jpg);
+}
+.services_of_a_psychologist_cl > div:nth-child(2) > div:nth-child(2) {
+    background-image: url(/static/P2_.jpg);
+}
+.services_of_a_psychologist_cl > div:nth-child(3) > div:nth-child(2) {
+    background-position: 50% 10%;
+    background-image: url(/static/P3_.jpeg);
+}
+.services_of_a_psychologist_cl > div:nth-child(4) > div:nth-child(2) {
+    background-image: url(/static/P4_.jpg);
+}
+.services_of_a_psychologist_cl > div:nth-child(5) > div:nth-child(2) {
+    background-image: url(/static/P5_.jpg);
+}
+.services_of_a_psychologist_cl > div:nth-child(6) > div:nth-child(2) {
+    background-image: url(/static/P6_.webp);
+}
+.services_of_a_psychologist_cl > div:nth-child(7) > div:nth-child(2) {
+    background-image: url(/static/P7_.jpg);
+}
+.services_of_a_psychologist_cl > div:nth-child(8) > div:nth-child(2) {
+    background-image: url(/static/P8_.jpg);
+}
+.services_of_a_psychologist_cl > div:nth-child(9) > div:nth-child(2) {
+    background-image: url(/static/P9_.jpg);
+}

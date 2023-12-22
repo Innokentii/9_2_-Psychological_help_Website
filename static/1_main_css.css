@@ -1,0 +1,288 @@
+/*=================================================================================*/
+/*                             ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ                               */
+/*VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV*/
+
+:root {
+    --w_h_modal_win: 200px; /*(ширина и высота карточки модального окна);*/
+    --bord_modal_win: 4px; /*(толщина рамки border карточки модального окна);*/
+    --height__head_website: 86px; /*(высота шапки сайта);*/
+    --bord_head_website: 2px; /*(толщина рамки шапки сайта));*/
+    --color_text_black: #0c265c; /*(основной цвет текста и границ)*/
+    --font_size_main: Gerbera, sans-serif !important; /*(основной шрифт текста)*/
+}
+
+/*=================================================================================*/
+/*                                  СТИЛИЗАЦИЯ                                    */
+/*VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV*/
+
+.welcoming_page_cl {
+    /*встречающая страница*/
+    width: 100%;
+    height: 1000px;
+    backdrop-filter: 4px;
+    background-image: url(/static/psychologists_background.jpg);
+    background-size: cover;
+    background-position: 0% 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.organizations_activities_cl {
+    /*деятельность организации*/
+    width: 100%;
+    background-color: #2980b9;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding-bottom: 80px;
+}
+
+.organizations_activities_cl > h1 {
+    margin-top: 80px;
+    color: rgb(229, 223, 223);
+    text-shadow: 1px 1px 3px black;
+}
+
+.description_organization_cl {
+    /*описание организации*/
+    width: 100%;
+    height: 450px;
+    background-color: rgb(218, 218, 221);
+    display: grid;
+    grid-template-columns: 0.25fr 0fr 0.5fr 0.25fr;
+    grid-template-rows: 1fr;
+}
+
+@media (max-width: 1500px) {
+    .description_organization_cl {
+        grid-template-columns: 0.1fr 0fr 0.7fr 0.1fr;
+    }
+}
+
+@media (max-width: 1150px) {
+    .description_organization_cl {
+        grid-template-columns: 0fr 0fr 1fr 0fr;
+    }
+}
+
+@media (max-width: 900px) {
+    .description_organization_cl {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+}
+
+.blue_background_cl {
+    /*синий_округленный_фон*/
+    width: 50%;
+    height: 100%;
+    background-color: #2980b9;
+    position: relative;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5;
+    border-top-left-radius: 100%;
+}
+
+.blue_background_2_cl {
+    /*синий_фон*/
+    width: 30%;
+    height: 100%;
+    background-color: #2980b9;
+    position: relative;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5;
+}
+
+.welcoming_text_cl {
+    /*встречающий_текст*/
+    position: absolute;
+    top: 150px;
+}
+
+.welcoming_text_cl > span:nth-child(1) {
+    font-size: 80px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px black;
+    color: var(--color_text_black);
+}
+
+.welcoming_text_cl > span:nth-child(3) {
+    font-size: 45px;
+    color: rgb(33, 33, 237);
+    text-shadow: 1px 1px 2px black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.list_of_advantages_cl {
+    /*мини_перечень_преимущества*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.list_of_advantages_cl > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.list_of_advantages_cl > div > img {
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 4px black;
+}
+
+.list_of_advantages_cl > div > span {
+    font-weight: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #8F5C1F;
+    text-shadow: 0.5px 0.5px 0.5px black;
+}
+
+.check_mark_cl {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+    font-size: 23px;
+    font-weight: lighter;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: rgb(229, 223, 223);
+    text-shadow: 2px 2px 2px black;
+}
+
+.check_mark_cl > img {
+    width: 25px;
+    height: 25px;
+}
+
+/*_____ваши проблемы_____*/
+.your_problems_cl {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 30px;
+}
+
+.your_problems_cl > div {
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 5px;
+    border: solid 3px var(--color_text_black);
+    border-left: none;
+    border-top: none;
+    border-radius: 15px;
+}
+
+.your_problems_cl > div > div:nth-child(1) {
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    filter: grayscale(71%);
+    filter: opacity(0.5);
+    border-radius: 15px;
+}
+
+.your_problems_cl > div > div:nth-child(2) {
+    width: 250px;
+    height: 150px;
+}
+
+.your_problems_cl > div > div:nth-child(2) > h3 {
+    margin: 0;
+    margin-top: 5px;
+}
+
+.your_problems_cl > div > div:nth-child(2) > div {
+    font-size: 15px;
+}
+
+.your_problems_cl > div > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.your_problems_cl > div:nth-child(1) > div:nth-child(1) {
+    background-image: url(/static/A-photo.jpg);
+}
+
+.your_problems_cl > div:nth-child(2) > div:nth-child(1) {
+    background-image: url(/static/B-photo.jpg);
+}
+
+.your_problems_cl > div:nth-child(3) > div:nth-child(1) {
+    background-image: url(/static/C_photo.jpeg);
+    background-position: 70% 50%;
+}
+
+.your_problems_cl > div:nth-child(4) > div:nth-child(1) {
+    background-image: url(/static/D-photo.jpg);
+    background-position: 70% 50%;
+}
+
+.your_problems_cl > div:nth-child(5) > div:nth-child(1) {
+    background-image: url(/static/E_photo.jpg);
+    background-position: 60% 50%;
+}
+
+/*_____решение_проблем_____*/
+.descr_organ_img_cl {
+    width: 280px;
+    height: 450px;
+    background-image: url(/static/photo_of_a_psychologist.png);
+    background-size: cover;
+}
+
+.descr_organ_text_cl {
+    padding: 15px;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.descr_organ_text_cl > p {
+    text-indent: 25px;
+    font-style: italic;
+}
+
+#order_button_3_id {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 40px;
+    border: solid 4px var(--color_text_black);
+    border-radius: 20px;
+    font-weight: bolder;
+    text-shadow: 1px 1px 2px black;
+    color: var(--color_text_black);
+    margin-top: 20px;
+    box-shadow: 2px 2px 3px black;
+}
+
+#order_button_3_id:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
